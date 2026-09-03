@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1697" viewBox="0 0 1200 1697" role="img" aria-labelledby="title desc">
+  <title id="title">Sampada Chaugule Resume</title>
+  <desc id="desc">Resume of Sampada Chaugule, Computer Science and Business Systems student.</desc>
+  <style>
+    .ink { fill: #172333; }
+    .muted { fill: #354556; }
+    .accent { fill: #e28a16; }
+    .rule { stroke: #87919b; stroke-width: 1; }
+    .heading { font: 700 19px Arial, sans-serif; letter-spacing: 1px; }
+    .body { font: 400 14px Arial, sans-serif; }
+    .small { font: 400 12px Arial, sans-serif; }
+    .label { font: 700 13px Arial, sans-serif; }
+    .project { font: 700 14px Arial, sans-serif; }
+    .bullet { font: 400 13px Arial, sans-serif; }
+  </style>
+  <rect width="1200" height="1697" fill="#ffffff"/>
+  <text x="60" y="58" class="ink" style="font:700 31px Arial,sans-serif;letter-spacing:1px">SAMPADA CHAUGULE</text>
+  <text x="60" y="84" class="accent" style="font:700 15px Arial,sans-serif">AI Application Development  |  Web Development  |  Python  |  Generative AI</text>
+  <text x="60" y="106" class="muted small">Belagavi, Karnataka   |   +91 9141524092   |   sampadachaugule1008@gmail.com   |   github.com/sampadachaugule   |   linkedin.com/in/sampada-chaugule-884014336</text>
+  <line x1="60" y1="122" x2="1140" y2="122" stroke="#172333" stroke-width="4"/>
+
+  <text x="60" y="151" class="ink heading">PROFESSIONAL SUMMARY</text><line x1="60" y1="161" x2="1140" y2="161" class="rule"/>
+  <text x="60" y="184" class="body ink">Computer Science and Business Systems student (CGPA 8.8/10) focused on AI application and end-to-end web application development.</text>
+  <text x="60" y="203" class="body ink">Builds user-facing applications integrating Generative AI, the Google Gemini API, REST APIs, databases, and ML frameworks.</text>
+  <text x="60" y="222" class="body ink">Hands-on with Python, JavaScript, Flutter, TensorFlow, Keras, Firebase, Supabase, Git/GitHub, and AI-assisted development tools,</text>
+  <text x="60" y="241" class="body ink">with a record of building and presenting real-world solutions through hackathons and innovation programs.</text>
+
+  <text x="60" y="275" class="ink heading">TECHNICAL SKILLS</text><line x1="60" y1="285" x2="1140" y2="285" class="rule"/>
+  <text x="60" y="307" class="body ink"><tspan class="label">Programming:</tspan> Python, Dart, JavaScript, C++, Java</text>
+  <text x="60" y="326" class="body ink"><tspan class="label">Web &amp; App Development:</tspan> HTML, CSS, JavaScript, Flutter, REST APIs, API Integration</text>
+  <text x="60" y="345" class="body ink"><tspan class="label">AI / Machine Learning:</tspan> Generative AI, Google Gemini API, AI Model Integration, TensorFlow, Keras, MobileNetV2, Machine Learning</text>
+  <text x="60" y="364" class="body ink"><tspan class="label">Backend &amp; Databases:</tspan> Supabase, Firebase, Database Concepts, SQL</text>
+  <text x="60" y="383" class="body ink"><tspan class="label">AI-Assisted Development &amp; Tools:</tspan> Antigravity, VS Code, Git, GitHub, Google Colab</text>
+  <text x="60" y="402" class="body ink"><tspan class="label">Data &amp; Analysis:</tspan> Pandas, NumPy, Matplotlib, Power BI</text>
+  <text x="60" y="421" class="body ink"><tspan class="label">Robotics / Simulation:</tspan> ROS 2, Webots, Gazebo</text>
+  <text x="60" y="440" class="body ink"><tspan class="label">Practices:</tspan> Version Control, Documentation, Debugging, Problem Solving</text>
+
+  <text x="60" y="475" class="ink heading">PROJECTS</text><line x1="60" y1="485" x2="1140" y2="485" class="rule"/>
+  <text x="60" y="508" class="project ink">VentureIQ  --  AI-Powered Startup Analysis Platform</text>
+  <text x="60" y="526" class="small muted">Google Gemini API  |  Generative AI  |  HTML · CSS · JavaScript  |  Supabase  |  REST APIs  |  Git/GitHub  |  Antigravity</text>
+  <text x="72" y="546" class="bullet ink">• Developed an AI-powered web application that analyzes startup ideas and presents structured feasibility, market, competitor, and roadmap</text>
+  <text x="84" y="563" class="bullet ink">insights through an interactive dashboard.</text>
+  <text x="72" y="583" class="bullet ink">• Integrated the Google Gemini API to generate structured AI analysis for startup feasibility, market landscape, competitor positioning, and strategic</text>
+  <text x="84" y="600" class="bullet ink">roadmaps.</text>
+  <text x="72" y="620" class="bullet ink">• Built four end-to-end modules -- Idea Discovery, Market Analysis, Competitor Analysis, and Roadmap Generation -- covering UI, API calls,</text>
+  <text x="84" y="637" class="bullet ink">response handling, and result rendering.</text>
+  <text x="72" y="657" class="bullet ink">• Integrated Supabase for backend and database functionality to persist user inputs and AI-generated results, while developing frontend workflows</text>
+  <text x="84" y="674" class="bullet ink">in HTML, CSS, and JavaScript with AI-assisted development tools.</text>
+
+  <text x="60" y="707" class="project ink">AgriNova  --  AI-Powered Smart Farming Application</text>
+  <text x="60" y="725" class="small muted">Python  |  TensorFlow  |  Keras  |  MobileNetV2  |  Generative AI  |  Firebase</text>
+  <text x="72" y="745" class="bullet ink">• Developed an AI-powered smart farming application combining machine learning and Generative AI for agricultural decision support.</text>
+  <text x="72" y="764" class="bullet ink">• Built a plant disease detection feature using TensorFlow, Keras, and MobileNetV2 with transfer learning for image classification.</text>
+  <text x="72" y="783" class="bullet ink">• Integrated Generative AI for conversational assistance and recommendations, including crop rotation planning, organic input recommendations,</text>
+  <text x="84" y="800" class="bullet ink">government scheme alerts, and multilingual assistance, backed by Firebase.</text>
+
+  <text x="60" y="833" class="project ink">Caretroid  --  AI Assistive Robot</text>
+  <text x="60" y="851" class="small muted">Python  |  ROS 2  |  Webots  |  Gazebo  |  AI Integration</text>
+  <text x="72" y="871" class="bullet ink">• Developed an AI-assisted robotics system for intelligent navigation and user assistance using Python and ROS 2.</text>
+  <text x="72" y="890" class="bullet ink">• Implemented autonomous navigation and voice guidance by simulating in Webots and Gazebo.</text>
+  <text x="72" y="909" class="bullet ink">• Integrated AI capabilities into the navigation and assistance workflow; project secured INR 2 lakh funding through Startup Karnataka NAIN 2.0.</text>
+
+  <text x="60" y="943" class="ink heading">EXPERIENCE</text><line x1="60" y1="953" x2="1140" y2="953" class="rule"/>
+  <text x="60" y="976" class="project ink">Data Analytics Trainee  --  iFutureTech</text><text x="1140" y="976" text-anchor="end" class="small muted">Feb 2026 -- Jun 2026</text>
+  <text x="72" y="995" class="bullet ink">• Built Python (Pandas, NumPy) preprocessing and transformation workflows to clean and prepare real-world datasets for analysis.</text>
+  <text x="72" y="1014" class="bullet ink">• Created interactive Power BI dashboards and visualizations to communicate findings to stakeholders.</text>
+  <text x="60" y="1042" class="project ink">Finance Research Intern  --  Ultimez Technology Pvt. Ltd.</text><text x="1140" y="1042" text-anchor="end" class="small muted">Jun 2025 -- Oct 2025</text>
+  <text x="60" y="1060" class="small muted">Project: Impact of FII and DII Activity on Indian Markets</text>
+  <text x="72" y="1080" class="bullet ink">• Analyzed FII and DII market activity using Python-based data analysis to study its effect on Indian markets.</text>
+  <text x="72" y="1099" class="bullet ink">• Researched trends and relationships in financial data and communicated results through visual summaries.</text>
+  <text x="60" y="1127" class="project ink">Data Science Intern  --  Cognifyz Technologies</text><text x="1140" y="1127" text-anchor="end" class="small muted">Dec 2024 -- Jan 2025</text>
+  <text x="72" y="1146" class="bullet ink">• Performed data preprocessing, exploratory data analysis, and visualization in Python to solve defined analytical problems.</text>
+
+  <text x="60" y="1180" class="ink heading">ACHIEVEMENTS</text><line x1="60" y1="1190" x2="1140" y2="1190" class="rule"/>
+  <text x="60" y="1213" class="bullet ink">• <tspan class="label">1st Place -- NEXORA National-Level Hackathon:</tspan> ranked 1st among 100+ teams; won INR 30,000.</text>
+  <text x="60" y="1232" class="bullet ink">• <tspan class="label">Top 10 -- Startup Karnataka NAIN 2.0, IIIT Dharwad:</tspan> selected among the top 10 teams; secured INR 2 lakh funding for the Caretroid project.</text>
+  <text x="60" y="1251" class="bullet ink">• <tspan class="label">4th Position -- NeoNexus 3.0 / Ballari Hackathon:</tspan> shortlisted among 40 teams from 189 participants; finished 4th in the top 10.</text>
+  <text x="60" y="1270" class="bullet ink">• <tspan class="label">Top 5 Academic Ranking:</tspan> ranked among the top 5 students in the department, semesters 3--6; CGPA 8.8/10.</text>
+
+  <text x="60" y="1304" class="ink heading">EDUCATION</text><line x1="60" y1="1314" x2="1140" y2="1314" class="rule"/>
+  <text x="60" y="1337" class="project ink">B.E., Computer Science and Business Systems</text>
+  <text x="60" y="1356" class="body ink">S. G. Balekundri Institute of Technology (SGBIT), Belagavi</text>
+  <text x="60" y="1375" class="small muted">CGPA: 8.8/10  |  Expected Graduation: 2027</text>
+
+  <text x="60" y="1409" class="ink heading">CERTIFICATIONS</text><line x1="60" y1="1419" x2="1140" y2="1419" class="rule"/>
+  <text x="60" y="1443" class="body ink">Cybersecurity  ·  Business Intelligence  ·  Data Visualization  ·  Power BI  ·  Data Analytics  ·  Deloitte Virtual Experience Program  ·  Tata Virtual Experience Program</text>
+</svg>

@@ -1,126 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sampada Chaugule — Computer Science and Business Systems student specializing in Data Analytics, AI/ML and Software Development.">
-  <title>Sampada Chaugule | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sampada Chaugule — Data, AI &amp; Technology</title>
+<meta name="description" content="Sampada Chaugule — Computer Science &amp; Business Systems student building intelligent solutions across data analytics, AI/ML, software development and robotics." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <a class="logo" href="#home">SC<span>.</span></a>
-    <button class="menu-btn" aria-label="Open menu">☰</button>
-    <nav id="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">COMPUTER SCIENCE & BUSINESS SYSTEMS</p>
-        <h1>Hi, I'm <span>Sampada</span> Chaugule.</h1>
-        <h2>Data Analytics • AI/ML • Software Development</h2>
-        <p class="hero-text">A curious technology enthusiast building practical solutions with data, artificial intelligence, web technologies and robotics.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore My Work</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/sampada-chougule-884014336" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-        <div class="quick-stats">
-          <div><strong>8.8</strong><span>CGPA</span></div>
-          <div><strong>Top 5</strong><span>Academic Rank</span></div>
-          <div><strong>1st</strong><span>Hackathon Win</span></div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
-        <div class="profile-mark">SC</div>
-        <div class="floating-card fc1">📊 Data Analytics</div>
-        <div class="floating-card fc2">🤖 AI & Robotics</div>
-        <div class="floating-card fc3">💻 Software</div>
-      </div>
-    </section>
+<!-- ============== NAV ============== -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo"><span class="dot"></span>SC</a>
 
-    <section id="about" class="section">
-      <div class="section-heading"><p class="eyebrow">01 / ABOUT</p><h2>Turning curiosity into useful technology.</h2></div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I am a Computer Science and Business Systems student at S. G. Balekundri Institute of Technology, Belagavi, with a strong interest in Data Analytics, Artificial Intelligence, software development and robotics.</p>
-          <p>I enjoy learning by building. My work ranges from AI-powered startup validation and smart farming to assistive robotics and data analysis. I also actively participate in hackathons, internships and technical projects.</p>
-          <p>My goal is to create technology that is not only technically strong, but also practical, meaningful and easy to use.</p>
-        </div>
-        <div class="info-card">
-          <div><span>Education</span><strong>B.E. — CSBS</strong></div>
-          <div><span>Institute</span><strong>SGBIT, Belagavi</strong></div>
-          <div><span>Current Level</span><strong>3rd Year / 6th Sem</strong></div>
-          <div><span>CGPA</span><strong>8.8</strong></div>
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="assets/resume/Sampada_Chaugule_Resume.svg" class="btn btn-ghost on-light btn-sm" download>Download Resume</a>
+    <button class="btn btn-ghost on-light btn-sm" data-open-resume>View Resume</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="eyebrow" style="color:var(--gold-400)">Navigate</span>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#resume">Resume</a>
+</div>
+
+<!-- ============== HERO ============== -->
+<section class="hero" id="home">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Computer Science &amp; Business Systems</span>
+      <h1 class="hero-name">SAMPADA<br /><span class="last">Chaugule</span></h1>
+
+      <div class="hero-roles">
+        <div class="hero-roles-track" id="rolesTrack">
+          <span>Data Analytics</span>
         </div>
       </div>
-    </section>
 
-    <section id="skills" class="section alt">
-      <div class="section-heading"><p class="eyebrow">02 / SKILLS</p><h2>My technical toolkit.</h2></div>
-      <div class="skills-grid">
-        <div class="skill-card"><span>01</span><h3>Programming</h3><p>Python · Java · C++</p></div>
-        <div class="skill-card"><span>02</span><h3>Web Development</h3><p>HTML · CSS · JavaScript</p></div>
-        <div class="skill-card"><span>03</span><h3>Data Analytics</h3><p>Python · EDA · Power BI · Visualization</p></div>
-        <div class="skill-card"><span>04</span><h3>AI / ML</h3><p>GenAI · TensorFlow · Keras · MobileNetV2</p></div>
-        <div class="skill-card"><span>05</span><h3>Robotics</h3><p>ROS · ROS2 · Webots · Gazebo</p></div>
-        <div class="skill-card"><span>06</span><h3>Tools & Platforms</h3><p>Git · GitHub · Firebase · Supabase · Colab</p></div>
+      <p class="hero-desc">Engineering student passionate about transforming data, AI, and technology into practical solutions — across analytics, intelligent applications, and robotics.</p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary magnetic">Explore My Work</a>
+        <a href="assets/resume/Sampada_Chaugule_Resume.svg" class="btn btn-ghost magnetic" download>Download Resume</a>
+        <button type="button" class="btn btn-ghost magnetic" data-open-resume>View Resume</button>
       </div>
-    </section>
 
-    <section id="projects" class="section">
-      <div class="section-heading"><p class="eyebrow">03 / PROJECTS</p><h2>Things I've built and explored.</h2></div>
-      <div class="project-grid">
-        <article class="project-card featured"><div class="project-number">01</div><div><span class="tag">MAJOR PROJECT</span><h3>VentureIQ</h3><p>AI-based startup idea validation platform designed to help founders analyze market potential, competitors, opportunities and build a practical roadmap.</p><div class="chips"><span>AI</span><span>Web</span><span>Market Analysis</span></div></div></article>
-        <article class="project-card"><div class="project-number">02</div><div><span class="tag">ROBOTICS</span><h3>Caretroid</h3><p>AI assistive robot project using ROS 2, autonomous navigation, robotics simulation and AI integration.</p><div class="chips"><span>ROS 2</span><span>AI</span><span>Robotics</span></div></div></article>
-        <article class="project-card"><div class="project-number">03</div><div><span class="tag">SMART AGRICULTURE</span><h3>Agrinova</h3><p>Smart farming system combining crop planning, plant disease detection, recommendations, alerts and conversational assistance.</p><div class="chips"><span>Gemini</span><span>TensorFlow</span><span>Firebase</span></div></div></article>
-        <article class="project-card"><div class="project-number">04</div><div><span class="tag">DATA ANALYTICS</span><h3>Student Performance Analysis</h3><p>Data analytics project focused on data cleaning, exploratory analysis, visualization and dashboard-based insights.</p><div class="chips"><span>Python</span><span>EDA</span><span>Power BI</span></div></div></article>
+      <div class="hero-connect">
+        <a href="#contact" class="btn-link on-dark">Let's Connect →</a>
       </div>
-    </section>
+    </div>
 
-    <section id="experience" class="section alt">
-      <div class="section-heading"><p class="eyebrow">04 / EXPERIENCE</p><h2>Learning beyond the classroom.</h2></div>
-      <div class="timeline">
-        <div class="timeline-item"><span>INTERNSHIP</span><h3>Finance Research Intern</h3><p>Worked on “Impact of FII and DII Activity on Indian Markets.”</p></div>
-        <div class="timeline-item"><span>INTERNSHIP</span><h3>Data Science Intern — Cognifyz Technologies</h3><p>Worked on data science-oriented tasks and practical problem solving.</p></div>
-        <div class="timeline-item"><span>TRAINING</span><h3>Data Analytics — iFutureTech</h3><p>Training in Python, EDA, data transformation and Power BI.</p></div>
+    <div class="hero-photo-zone">
+      <div class="hero-photo-frame">
+        <img src="assets/images/sampada.jpg" alt="Portrait of Sampada Chaugule" />
       </div>
-    </section>
+      <div class="float-card fc-1"><span class="num">8.8</span><span class="label">CGPA</span></div>
+      <div class="float-card fc-2"><span class="num">Top 5</span><span class="label">Academic Position</span></div>
+      <div class="float-card fc-3"><span class="num">Hackathon</span><span class="label">Winner</span></div>
+      <div class="float-card fc-4"><span class="num">AI / Data</span><span class="label">Enthusiast</span></div>
+    </div>
+  </div>
 
-    <section id="achievements" class="section">
-      <div class="section-heading"><p class="eyebrow">05 / ACHIEVEMENTS</p><h2>Milestones I'm proud of.</h2></div>
-      <div class="achievement-grid">
-        <div class="achievement"><strong>01</strong><h3>National NEXORA Hackathon</h3><p>1st Place among 100+ teams · ₹30,000 prize</p></div>
-        <div class="achievement"><strong>02</strong><h3>Startup Karnataka NAIN 2.0</h3><p>Selected among Top 10 teams at IIIT Dharwad · ₹2 lakh funding</p></div>
-        <div class="achievement"><strong>03</strong><h3>NeoNexus 36.0 / Ballari Hack</h3><p>Shortlisted among 40 teams from 189 teams</p></div>
-        <div class="achievement"><strong>04</strong><h3>Sports Day</h3><p>1st Place in relay</p></div>
+  <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <span class="eyebrow reveal">About</span>
+    <div class="about-grid" style="margin-top:20px;">
+      <div class="about-photo reveal">
+        <img src="assets/images/sampada.jpg" alt="Sampada Chaugule" />
+        <div class="about-stat">
+          <span class="num">8.8</span>
+          <span class="label">CGPA / 10</span>
+        </div>
       </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-      <p class="eyebrow">06 / CONTACT</p>
-      <h2>Let's build something meaningful.</h2>
-      <p>I'm open to internships, projects, collaborations and opportunities to learn.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:sampadachougule1008@gmail.com">Email Me</a>
-        <a class="btn secondary" href="https://github.com/sampadachaugule" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/sampada-chougule-884014336" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <div class="about-copy reveal">
+        <h2 class="section-title">Curious by <em>discipline</em>, practical by design.</h2>
+        <p style="margin-top:24px;">I'm a <strong>4th-year Computer Science and Business Systems student</strong> with an 8.8 CGPA and hands-on experience across <strong>Data Analytics, AI/ML, software development, and robotics</strong>.</p>
+        <p>I enjoy building practical solutions that combine technology, data, and intelligent systems — from analytics dashboards to AI-assisted applications and autonomous robots.</p>
+
+        <div class="about-pillars reveal-stagger">
+          <div class="pillar"><span class="idx">01</span><div class="name">Data-Driven</div></div>
+          <div class="pillar"><span class="idx">02</span><div class="name">AI-Powered</div></div>
+          <div class="pillar"><span class="idx">03</span><div class="name">Problem-Solving</div></div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
 
-  <footer><span>© 2026 Sampada Chaugule</span><span>Built with HTML · CSS · JavaScript</span></footer>
-  <script src="script.js"></script>
+<!-- ============== SKILLS ============== -->
+<section class="skills" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Technical Skills</span>
+      <h2 class="section-title">A toolkit built across <em>data, intelligence &amp; systems.</em></h2>
+      <p class="section-sub">Grouped by discipline — the languages, frameworks and platforms I build with.</p>
+    </div>
+
+    <div class="skill-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="cat-label">Programming</span>
+        <h3>Languages</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">Dart</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="cat-label">Web Development</span>
+        <h3>Frontend</h3>
+        <div class="chip-row">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="cat-label">Data &amp; Analytics</span>
+        <h3>Analytics</h3>
+        <div class="chip-row">
+          <span class="chip">Data Analytics</span><span class="chip">EDA</span><span class="chip">Data Visualization</span><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="cat-label">AI / ML</span>
+        <h3>Intelligence</h3>
+        <div class="chip-row">
+          <span class="chip">Machine Learning</span><span class="chip">Generative AI</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">MobileNetV2</span><span class="chip">Google Gemini API</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="cat-label">Robotics</span>
+        <h3>Systems</h3>
+        <div class="chip-row">
+          <span class="chip">ROS</span><span class="chip">ROS 2 Humble</span><span class="chip">Webots</span><span class="chip">Gazebo</span><span class="chip">TurtleBot</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="cat-label">Backend / Database</span>
+        <h3>Infrastructure</h3>
+        <div class="chip-row">
+          <span class="chip">Firebase</span><span class="chip">Supabase</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-grid reveal-stagger" style="margin-top:1px;">
+      <div class="skill-card" style="grid-column:1/-1;">
+        <span class="cat-label">Tools</span>
+        <h3>Workflow</h3>
+        <div class="chip-row">
+          <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Google Colab</span><span class="chip">Kaggle</span><span class="chip">Fusion 360</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EXPERIENCE ============== -->
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2 class="section-title">Applied learning, <em>on real problems.</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-index">EXP · 01</div>
+        <div>
+          <h3 class="tl-role">Finance Research Intern</h3>
+          <div class="tl-org">Ultimez Technology Pvt. Ltd.</div>
+          <div class="tl-project">Project: "Impact of FII and DII Activity on Indian Markets"</div>
+          <div class="tl-points">
+            <span>Financial market research</span>
+            <span>FII/DII activity analysis</span>
+            <span>Data-driven market insights</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-index">EXP · 02</div>
+        <div>
+          <h3 class="tl-role">Data Science Intern</h3>
+          <div class="tl-org">Cognifyz Technologies</div>
+          <div class="tl-points">
+            <span>Data cleaning</span>
+            <span>Exploratory data analysis</span>
+            <span>Data visualization</span>
+            <span>Analytical insights</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-index">EXP · 03</div>
+        <div>
+          <h3 class="tl-role">Data Analytics Training</h3>
+          <div class="tl-org">iFutureTech</div>
+          <div class="tl-points">
+            <span>Python</span>
+            <span>EDA</span>
+            <span>Data transformation</span>
+            <span>Power BI</span>
+            <span>Data visualization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROJECTS ============== -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Featured Projects</span>
+      <h2 class="section-title">Ideas, <em>built end to end.</em></h2>
+      <p class="section-sub">Actual project interfaces, physical prototypes, and AI data analytics dashboards built across disciplines.</p>
+    </div>
+
+    <div class="project-list">
+
+      <!-- PROJECT 01 — FEATURED -->
+      <article class="proj-card featured reveal">
+        <div>
+          <span class="proj-num">Project 01 / Major Project</span>
+          <h3 class="proj-name">VentureIQ</h3>
+          <div class="proj-tagline">AI-Based Startup Idea Validation System</div>
+          <p class="proj-desc">An AI-powered platform designed to analyze and validate startup ideas through structured analysis.</p>
+          <ul class="feat-list">
+            <li>Startup idea analysis</li>
+            <li>Market analysis</li>
+            <li>Competitor analysis</li>
+            <li>Validation scoring</li>
+            <li>Roadmap generation</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Google Gemini API</span>
+          </div>
+        </div>
+        <div class="proj-mock">
+          <div class="mock-bar">
+            <i></i><i></i><i></i>
+            <span class="mock-title">VentureIQ — AI Startup Intelligence Platform</span>
+          </div>
+          <div class="mock-img-wrapper">
+            <img src="assets/images/project-ventureiq.png" alt="VentureIQ Interface" class="proj-img" />
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 02 -->
+      <article class="proj-card featured reveal">
+        <div>
+          <span class="proj-num">Project 02</span>
+          <h3 class="proj-name">Caretroid</h3>
+          <div class="proj-tagline">AI-Powered Assistive Robot</div>
+          <p class="proj-desc">An AI-assisted robot designed for elderly support with intelligent interaction and autonomous navigation.</p>
+          <div class="tag-row">
+            <span class="tag">ROS 2</span><span class="tag">Webots</span><span class="tag">Gazebo</span><span class="tag">Python</span><span class="tag">AI/ML</span><span class="tag">TurtleBot</span><span class="tag">LiDAR</span><span class="tag">Speech-to-Text</span><span class="tag">Text-to-Speech</span>
+          </div>
+          <div class="proj-highlight">Selected among Top 10 teams under Startup Karnataka NAIN 2.0 · Received ₹2 lakh funding at IIIT Dharwad.</div>
+        </div>
+        <div class="proj-mock">
+          <div class="mock-bar">
+            <i></i><i></i><i></i>
+            <span class="mock-title">Caretroid — Physical Assistive Robot Prototype</span>
+          </div>
+          <div class="mock-img-wrapper portrait-wrapper">
+            <img src="assets/images/project-caretroid.jpg" alt="Caretroid Physical Assistive Robot Prototype" class="proj-img fit-contain" />
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 03 -->
+      <article class="proj-card featured reveal">
+        <div>
+          <span class="proj-num">Project 03</span>
+          <h3 class="proj-name">Agrinova</h3>
+          <div class="proj-tagline">Smart Farming System</div>
+          <p class="proj-desc">A smart agriculture platform combining AI and data analytics to assist farmers with intelligent recommendations.</p>
+          <ul class="feat-list">
+            <li>Crop planning</li>
+            <li>Plant disease detection</li>
+            <li>Government scheme alerts</li>
+            <li>AI chatbot</li>
+            <li>Organic input recommendations</li>
+            <li>Multilingual assistance</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Gemini API</span><span class="tag">TensorFlow</span><span class="tag">MobileNetV2</span><span class="tag">Python</span>
+          </div>
+        </div>
+        <div class="proj-mock">
+          <div class="mock-bar">
+            <i></i><i></i><i></i>
+            <span class="mock-title">AgriNova — Smart Agriculture Platform</span>
+          </div>
+          <div class="mock-img-wrapper">
+            <img src="assets/images/project-agrinova.png" alt="AgriNova Platform Interface" class="proj-img" />
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 04 -->
+      <article class="proj-card featured reveal">
+        <div>
+          <span class="proj-num">Project 04</span>
+          <h3 class="proj-name">Student Performance Analysis</h3>
+          <div class="proj-tagline">Data Analytics Dashboard</div>
+          <p class="proj-desc">Data analytics project analyzing student performance data to identify important factors affecting results and build interactive dashboards.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Power BI</span><span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="proj-mock">
+          <div class="mock-bar">
+            <i></i><i></i><i></i>
+            <span class="mock-title">Student Performance Analytics Dashboard</span>
+          </div>
+          <div class="mock-img-wrapper">
+            <img src="assets/images/project-student-analytics.png" alt="Student Performance Analytics Dashboard" class="proj-img" />
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== ACHIEVEMENTS ============== -->
+<section class="achievements" id="achievements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Achievements</span>
+      <h2 class="section-title">Recognition earned <em>by building.</em></h2>
+    </div>
+
+    <div class="ach-grid reveal-stagger">
+      <div class="ach-card">
+        <div class="ach-num">1st</div>
+        <span class="ach-name">Nexora National Hackathon</span>
+        <ul class="ach-points">
+          <li>12-hour hackathon</li>
+          <li>100+ competing teams</li>
+          <li>₹30,000 prize</li>
+        </ul>
+      </div>
+
+      <div class="ach-card">
+        <div class="ach-num">Top 10</div>
+        <span class="ach-name">Startup Karnataka NAIN 2.0</span>
+        <ul class="ach-points">
+          <li>Caretroid project</li>
+          <li>₹2 lakh funding received</li>
+          <li>IIIT Dharwad</li>
+        </ul>
+      </div>
+
+      <div class="ach-card">
+        <div class="ach-num">4th</div>
+        <span class="ach-name">NeoNexus 36.0 / Ballari Hack</span>
+        <ul class="ach-points">
+          <li>Shortlisted — 40 of 189 teams</li>
+          <li>Ranked 4th of Top 10</li>
+        </ul>
+      </div>
+
+      <div class="ach-card">
+        <div class="ach-num">Top 5</div>
+        <span class="ach-name">Academic Position</span>
+        <ul class="ach-points">
+          <li>8.8 CGPA</li>
+          <li>3rd to 6th semester</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CERTIFICATIONS ============== -->
+<section class="certs" id="certifications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Certifications</span>
+      <h2 class="section-title">Continued, <em>structured learning.</em></h2>
+    </div>
+
+    <div class="certs-grid reveal-stagger">
+      <div class="cert-item"><span class="mark">01</span><div class="txt"><div class="t">Data Analytics</div><div class="s">iFutureTech</div></div></div>
+      <div class="cert-item"><span class="mark">02</span><div class="txt"><div class="t">Business Intelligence</div><div class="s">Certification</div></div></div>
+      <div class="cert-item"><span class="mark">03</span><div class="txt"><div class="t">Data Visualization</div><div class="s">Certification</div></div></div>
+      <div class="cert-item"><span class="mark">04</span><div class="txt"><div class="t">Power BI</div><div class="s">Certification</div></div></div>
+      <div class="cert-item"><span class="mark">05</span><div class="txt"><div class="t">Cybersecurity</div><div class="s">Certification</div></div></div>
+      <div class="cert-item"><span class="mark">06</span><div class="txt"><div class="t">Tata Virtual Program</div><div class="s">Virtual Experience</div></div></div>
+      <div class="cert-item"><span class="mark">07</span><div class="txt"><div class="t">Deloitte Virtual Program</div><div class="s">Virtual Experience</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AREAS OF INTEREST ============== -->
+<section class="interests" id="interests">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Areas of Interest</span>
+      <h2 class="section-title">Where I like to <em>go deep.</em></h2>
+    </div>
+
+    <div class="interest-grid reveal-stagger">
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Data Analytics</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Artificial Intelligence</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Machine Learning</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Robotics</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Business Intelligence</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Finance Research</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Full Stack Development</span></div>
+      <div class="interest-card"><span class="ic-mark">◆</span><span>Marketing Analytics</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHY WORK WITH ME ============== -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Work With Me</span>
+      <h2 class="section-title">How I <em>approach</em> the work.</h2>
+    </div>
+
+    <div class="why-grid reveal-stagger">
+      <div class="why-card">
+        <h4>Data-Driven Thinking</h4>
+        <p>I enjoy turning raw data into meaningful insights.</p>
+      </div>
+      <div class="why-card">
+        <h4>Building With AI</h4>
+        <p>I explore AI and ML to create practical intelligent applications.</p>
+      </div>
+      <div class="why-card">
+        <h4>Project-Focused</h4>
+        <p>I learn by building real-world solutions.</p>
+      </div>
+      <div class="why-card">
+        <h4>Continuous Learning</h4>
+        <p>I continuously explore new technologies and improve my skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== RESUME SECTION ============== -->
+<section class="resume-section" id="resume">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h2 class="section-title">Actual Resume &amp; <em>Highlights.</em></h2>
+      <p class="section-sub">Preview my actual resume directly below or download the official PDF copy for offline reference.</p>
+    </div>
+
+    <div class="resume-grid reveal">
+      <!-- Left: Resume Card Thumbnail -->
+      <div class="resume-card-preview" data-open-resume title="Click to view full resume">
+        <div class="resume-thumb-wrapper">
+          <img src="assets/resume/Sampada_Chaugule_Resume.svg" alt="Sampada Chaugule Official Resume" class="resume-thumb-img" />
+          <div class="resume-preview-overlay">
+            <span class="resume-preview-badge">🔍 View Full Resume</span>
+            <span style="font-size:12px;font-family:var(--font-mono);opacity:0.85;">Click to expand high-res image</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Highlights & Download CTA -->
+      <div class="resume-highlights">
+        <h3 style="font-family:var(--font-display);font-size:28px;color:var(--bg);">Sampada Chaugule</h3>
+        <p style="color:var(--gold-400);font-family:var(--font-mono);font-size:14px;margin-top:-6px;">Computer Science &amp; Business Systems Student · Data Enthusiast · Problem Solver</p>
+
+        <div class="resume-highlights-grid">
+          <div class="resume-hl-item">
+            <div class="resume-hl-title">Education &amp; Grade</div>
+            <div class="resume-hl-val">B.E. CSBS · 8.8 CGPA</div>
+            <div class="resume-hl-desc">S.G. Balekundri Institute of Tech, Belagavi (Top 5 Academic Rank)</div>
+          </div>
+
+          <div class="resume-hl-item">
+            <div class="resume-hl-title">Core Focus</div>
+            <div class="resume-hl-val">Data, AI/ML &amp; Robotics</div>
+            <div class="resume-hl-desc">Python, SQL, Power BI, TensorFlow, ROS 2, Gemini API</div>
+          </div>
+
+          <div class="resume-hl-item">
+            <div class="resume-hl-title">Internships</div>
+            <div class="resume-hl-val">Finance &amp; Data Science</div>
+            <div class="resume-hl-desc">Ultimez Technology (Finance Research) &amp; Cognifyz (Data Science)</div>
+          </div>
+
+          <div class="resume-hl-item">
+            <div class="resume-hl-title">Top Honor</div>
+            <div class="resume-hl-val">1st Place Hackathon</div>
+            <div class="resume-hl-desc">Nexora National Hackathon Winner · ₹2L NAIN 2.0 Grant</div>
+          </div>
+        </div>
+
+        <div class="resume-actions-row">
+          <a href="assets/resume/Sampada_Chaugule_Resume.svg" class="btn btn-primary magnetic" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+          <button type="button" class="btn btn-ghost magnetic" data-open-resume style="border-color:rgba(250,248,243,0.3);color:var(--bg);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            View Full Resume
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="justify-content:center;">Get In Touch</span>
+    <h2 class="contact-title reveal">Let's build something <em>meaningful.</em></h2>
+    <p class="contact-text reveal">Interested in data, AI, software, or innovative technology? I'd love to connect and explore opportunities to learn, build, and collaborate.</p>
+
+    <div class="contact-cta reveal">
+      <a href="mailto:sampadachaugule1008@gmail.com" class="btn btn-primary magnetic">Email Me</a>
+      <a href="https://www.linkedin.com/in/sampada-chougule-884014336" target="_blank" rel="noopener" class="btn btn-ghost on-light magnetic">LinkedIn</a>
+      <a href="https://github.com/sampadachaugule" target="_blank" rel="noopener" class="btn btn-ghost on-light magnetic">GitHub</a>
+    </div>
+
+    <a href="mailto:sampadachaugule1008@gmail.com" class="contact-email reveal">sampadachaugule1008@gmail.com</a>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <div class="footer-brand">Sampada Chaugule</div>
+      <div class="footer-role">Data Analytics · AI/ML · Software Development</div>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/sampada-chougule-884014336" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://github.com/sampadachaugule" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Sampada Chaugule</div>
+</footer>
+
+<!-- ============== RESUME PREVIEW MODAL ============== -->
+<div class="resume-modal" id="resumeModal" aria-hidden="true" role="dialog" aria-labelledby="resumeModalTitle">
+  <div class="resume-modal-container">
+    <div class="resume-modal-header">
+      <div class="resume-modal-title" id="resumeModalTitle">
+        <span>Sampada Chaugule — Official Resume</span>
+        <span class="status-tag">Verified Document</span>
+      </div>
+      <div class="resume-modal-actions">
+        <a href="assets/resume/Sampada_Chaugule_Resume.svg" class="btn btn-primary btn-sm" download>
+          Download Resume
+        </a>
+        <a href="assets/resume/Sampada_Chaugule_Resume.svg" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="color:var(--bg);border-color:rgba(250,248,243,0.3);">
+          Open Full Image
+        </a>
+        <button type="button" class="btn btn-ghost btn-sm" id="closeResumeModal" aria-label="Close modal" style="color:var(--bg);border-color:rgba(250,248,243,0.3);">
+          ✕ Close
+        </button>
+      </div>
+    </div>
+    <div class="resume-modal-body">
+      <img src="assets/resume/Sampada_Chaugule_Resume.svg" alt="Sampada Chaugule Resume Full View" class="resume-modal-img" />
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
